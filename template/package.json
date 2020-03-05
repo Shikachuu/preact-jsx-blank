@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && sirv build --cors --single",
+    "dev": "preact watch"
+  },
+  "devDependencies": {
+    "if-env": "^1.0.0",
+    "preact-cli": "^3.0.0-rc.6",
+    "sirv-cli": "^0.4.5"
+  },
+  "dependencies": {
+    "preact": "^10.1.0",
+    "preact-compat": "^3.19.0",
+    "preact-render-to-string": "^5.1.2",
+    "preact-router": "^3.2.1"
+  },
+  "alias": {
+    "react": "preact-compat",
+    "react-dom": "preact-compat"
+  }
+}
